@@ -5,7 +5,8 @@ let blogPost = [];
 
 const submitBlogPost = (event) => {
     event.preventDefault(); // do not allow the browser to assume it's standard behave.
-    
+    console.log(event);
+
     const username = document.querySelector('#userName').value; //to get the input from the form
     const title = document.querySelector('#title').value;
     const content = document.querySelector('#content').value;
@@ -17,11 +18,15 @@ const submitBlogPost = (event) => {
 
     // add the object into our blogPost array
     blogPost.push(newPost);
-
+    console.log(newPost);
     //finally store the array into  the localStorage
-    localStorage.setItem('blogPosts', JSON.stringify(blogPost));
+    localStorage.setItem('blogPosts', JSON.stringify(blogPost)); // retrive JSON from this line.
 
     // Redirect to posts page (blog.html)
     window.location.href = 'blog.html';
 };
+
+document.addEventListener(`DOMContentLoaded`, () => {
+    document.getElementById(`submit-btn`).addEventListener(`click`, submitBlogPost)
+});
 
