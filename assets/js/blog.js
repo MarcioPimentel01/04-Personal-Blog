@@ -7,16 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedPosts) {
         const posts = JSON.parse(savedPosts); //02 - Use JSON for the stored posts back into and array
         
-        posts.forEach(post => {
+        posts.forEach(post => { //.forEach method to iterate over each post input
             const postElement = document.createElement('div');
-            postElement.classList.add('post');
+            postElement.classList.add('post'); // adds the CSS class to the div element
             postElement.innerHTML = `<h3>${post.title}</h3>
             <p>${post.content}</p> <p>By: ${post.username}</p>`;
             recentPostsContainer.appendChild(postElement);
         });
-    } else {
-        // Display a message if there are no saved blog posts
-        recentPostsContainer.innerHTML = '<p>No recent posts found.</p>';
-    }
+    } 
 });
+
+
+const backMainPage = document.getElementById(`back-to-main-page`);
+backMainPage.addEventListener(`click`, () => {
+    window.location.href = 'index.html';
+
+});
+
+
+
+
 
