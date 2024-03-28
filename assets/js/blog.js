@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const postElement = document.createElement('div');
             postElement.classList.add('post'); // adds the CSS class to the div element
             postElement.innerHTML = `<h3>${post.title}</h3>
-            <p>${post.content}</p> <p>By: ${post.username}</p>`;
+            <p>${post.content}</p> <p><b>By:</b> ${post.username}</p>
+            ${new Date().toLocaleString()}</p>`; // Add timestamp here`;
             recentPostsContainer.appendChild(postElement);
         });
     } 
 });
-
 
 const backMainPage = document.getElementById(`back-to-main-page`);
 backMainPage.addEventListener(`click`, () => {
