@@ -11,17 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const postElement = document.createElement('div');
             postElement.classList.add('post'); // adds the CSS class to the div element
             postElement.innerHTML = `<h3>${post.title}</h3>
+<<<<<<< HEAD
             <p>${post.content}</p> <p>By: ${post.username}</p>`;
+=======
+            <p>${post.content}</p> <p><b>By:</b> ${post.username}</p>
+            ${new Date().toLocaleString()}</p>`; // Add timestamp here`;
+>>>>>>> parent of 72f7a51 (fixed, blog.js problem)
             recentPostsContainer.appendChild(postElement);
         });
     } 
 });
 
+<<<<<<< HEAD
 
 const backMainPage = document.getElementById(`back-to-main-page`);
 backMainPage.addEventListener(`click`, () => {
     window.location.href = 'index.html';
 
+=======
+const backMainPage = document.getElementById(`back-to-main-page`);
+backMainPage.addEventListener(`click`, () => {
+    window.location.href = 'index.html';
+
+>>>>>>> parent of 72f7a51 (fixed, blog.js problem)
 });
 
 
