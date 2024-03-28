@@ -1,0 +1,116 @@
+:root[data-theme="light"] {
+    --background-color: rgb(77, 118, 219);
+    --text-color: darkblue;
+    --button-background-color: darkgreen;
+    --side-image-background-color: rgb(255, 255, 255);
+    --text-color-alt: darkblue;
+}
+
+:root[data-theme="dark"] {
+    --background-color: rgb(4, 15, 44);
+    --text-color: white;
+    --button-background-color: darkgreen;
+    --side-image-background-color: rgb(27, 22, 76);
+    --text-color-alt: white;
+}
+
+.hero {
+    background-color: var(--background-color);
+    justify-content: space-around;
+    color: var(--text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    padding: 1%;
+}
+
+img {
+    height: 450px;
+    background-color: var(--side-image-background-color);
+}
+
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    padding: 1%;
+    text-align: center;
+}
+
+.side-image {
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+    background-color: var(--side-image-background-color);
+}
+
+section {
+    display: flex;
+}
+
+div h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+div .class-form-group,
+div .class-title,
+div .class-content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    margin: 20px;
+}
+
+div .class-content textarea {
+    width: 800px;
+    height: 450px;
+    padding: 3%;
+    font-size: 18px;
+    border-style: ridge;
+}
+
+#userName {
+    width: 500px;
+    padding: 3%;
+    font-size: 18px;
+    border-style: ridge;
+    
+}
+
+
+#title {
+    width: 500px;
+    padding: 3%;
+    font-size: 18px;
+    border-style: ridge;
+}
+
+#content {
+    width: 800px;
+    height: 450px;
+    padding: 3%;
+    font-size: 18px;
+    border-style: ridge;
+}
+
+.label {
+    color: var(--text-color-alt);
+        
+}
+
+
+#submit-btn,
+button {
+    background: var(--button-background-color);
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+};
