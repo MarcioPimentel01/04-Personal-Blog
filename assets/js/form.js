@@ -16,6 +16,7 @@ const submitBlogPost = (event) => {
     const content = document.querySelector('#content').value;
 
     //validate de user input (Anthony's idea)
+
     if (!userName || !title || !content) {
         console.log(`invalid Input`);
         alert(`Please fill all fields`);
@@ -24,7 +25,7 @@ const submitBlogPost = (event) => {
 
     // transform user input into an object, in our case, userName, post title and post content.
     const newPost = {
-        userName: userName, title: title, content: content
+        username: userName, title: title, content: content
     };
 
     // add the object into our blogPost array
@@ -39,7 +40,7 @@ const submitBlogPost = (event) => {
         const submitButton = document.getElementById(`submit-btn`);
         submitButton.addEventListener(`click`, submitBlogPost);
     });
-    
+
     // Redirect to posts page (blog.html)
     window.location.href = 'blog.html';
 };
