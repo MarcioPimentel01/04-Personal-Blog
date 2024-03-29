@@ -16,6 +16,7 @@ const submitBlogPost = (event) => {
     const content = document.querySelector('#content').value;
 
     //validate de user input (Anthony's idea)
+
     if (!userName || !title || !content) {
         console.log(`invalid Input`);
         alert(`Please fill all fields`);
