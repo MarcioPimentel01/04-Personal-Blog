@@ -4,20 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.addEventListener('click', submitBlogPost);
   });
   
-  // Initialize an empty array outside of the submitBlogPost function
+  // Initialize an empty array outside of the submitBlogPost function - People from StackFLow say that is a good practice
   let blogPost = [];
   
   // Define the submitBlogPost function
   const submitBlogPost = (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); // Prevent default browser form submission behavior
   
-    const userName = document.getElementById('userName').value;
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
+    //changed back to querySelector to see if could solve the problem with doble posting
+    const userName = document.querySelector('#userName').value;
+    const title = document.querySelector('#title').value;
+    const content = document.querySelector('#content').value;
   
-    // Validate user input:
+    // Validate user input - ternary operator way:
 
-    !userName || !title || !content ? (console.log(`Invalid input`), alert(`Please fill up all fields`), false) : true;
+    !userName || !title || !content ? (console.log(`Invalid input`), alert(`Please fill up all fields`), false) : !true;
 
   
     // Transform user input into an object
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: title,
       content: content
     };
-  
+      
     // Retrieve existing posts from localStorage (or create an empty array)
     const existingPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
   
