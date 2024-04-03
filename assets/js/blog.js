@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => { //Loads HTML DOM before JS
                 <h3>${post.title}</h3>
                 <p>${post.content}</p>
                 <p><b>By:</b> ${post.username}</p>
-                <p>${new Date().toLocaleString()}</p>`; // I decided to add time for the post
+                <p>${new Date().toLocaleString()}</p><br><hr>`; // I decided to add time for the post
             // Append the post element to the recent posts container div element
             recentPostsContainer.appendChild(postElement);
         });

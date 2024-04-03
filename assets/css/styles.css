@@ -15,12 +15,29 @@
 }
 
 .hero {
+    display: flex;
+    flex-direction: row;
     background-color: var(--background-color);
     justify-content: space-around;
     color: var(--text-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     padding: 1%;
+}
+
+h2 {
+    padding-left: 15px;
+    color: darkblue;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#recent-posts-container {
+    padding: 30px;
+    margin: 25px;
+    border-style: double;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img {
@@ -119,4 +136,20 @@ button {
     width: 200px;
     margin-bottom: 5px;
     border-radius: 5px;
-};
+}
+
+#back-btn {
+    display: flex;
+    justify-content: right;
+}
+
+#back-to-main-page {
+   
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
