@@ -16,10 +16,15 @@ const submitBlogPost = (event) => {
   const title = document.querySelector('#title').value;
   const content = document.querySelector('#content').value;
 
-  // Validate user input - ternary operator way:
+  // Validate user input - ternary operator way: - It was not working, when the user was clicking on the alert it would send an empty post
+  // !userName || !title || !content ? (console.log(`Invalid input`), alert(`Please fill up all fields`), false) : true; 
 
-  !userName || !title || !content ? (console.log(`Invalid input`), alert(`Please fill up all fields`), false) : !true;
-
+    if (!userName || !title || !content) {
+      console.log(`Invalid input`);
+      alert(`Please fill up all fields`);
+      return false;
+    }
+   
 
   // Transform user input into an object
   const newPost = {
